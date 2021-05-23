@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var ourImage: UIImage?
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Image(uiImage: ourImage!)
+                .resizable()
+            Button(action: { // Start editing the image
+                
+            }, label: {
+                Text("Edit")
+            })
+        }
     }
 }
 

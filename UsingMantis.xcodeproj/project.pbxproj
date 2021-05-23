@@ -11,6 +11,7 @@
 		18A8A253265A3A52004FEE0E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8A252265A3A52004FEE0E /* ContentView.swift */; };
 		18A8A255265A3A55004FEE0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A8A254265A3A55004FEE0E /* Assets.xcassets */; };
 		18A8A258265A3A55004FEE0E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A8A257265A3A55004FEE0E /* Preview Assets.xcassets */; };
+		780C31C25F5062B0F6E5963B /* Pods_UsingMantis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D8EAB46320E326B682D859 /* Pods_UsingMantis.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,9 @@
 		18A8A254265A3A55004FEE0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A8A257265A3A55004FEE0E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18A8A259265A3A55004FEE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7816578F3408DBF26AF8B3DB /* Pods-UsingMantis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsingMantis.release.xcconfig"; path = "Target Support Files/Pods-UsingMantis/Pods-UsingMantis.release.xcconfig"; sourceTree = "<group>"; };
+		C9D8EAB46320E326B682D859 /* Pods_UsingMantis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UsingMantis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE4A541E392371589B7B0C61 /* Pods-UsingMantis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsingMantis.debug.xcconfig"; path = "Target Support Files/Pods-UsingMantis/Pods-UsingMantis.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780C31C25F5062B0F6E5963B /* Pods_UsingMantis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +43,8 @@
 			children = (
 				18A8A24F265A3A52004FEE0E /* UsingMantis */,
 				18A8A24E265A3A52004FEE0E /* Products */,
+				4B1527799D92419AB8DDC066 /* Pods */,
+				7810DEC0E6CE27E57F11F6A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +76,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4B1527799D92419AB8DDC066 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE4A541E392371589B7B0C61 /* Pods-UsingMantis.debug.xcconfig */,
+				7816578F3408DBF26AF8B3DB /* Pods-UsingMantis.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7810DEC0E6CE27E57F11F6A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9D8EAB46320E326B682D859 /* Pods_UsingMantis.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A8A25C265A3A55004FEE0E /* Build configuration list for PBXNativeTarget "UsingMantis" */;
 			buildPhases = (
+				5E28677F8B2558C7F68D418D /* [CP] Check Pods Manifest.lock */,
 				18A8A249265A3A52004FEE0E /* Sources */,
 				18A8A24A265A3A52004FEE0E /* Frameworks */,
 				18A8A24B265A3A52004FEE0E /* Resources */,
+				8BFAEF4A451CCAACCED2F96E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E28677F8B2558C7F68D418D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UsingMantis-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BFAEF4A451CCAACCED2F96E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UsingMantis/Pods-UsingMantis-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UsingMantis/Pods-UsingMantis-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UsingMantis/Pods-UsingMantis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18A8A249265A3A52004FEE0E /* Sources */ = {
@@ -264,6 +333,7 @@
 		};
 		18A8A25D265A3A55004FEE0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE4A541E392371589B7B0C61 /* Pods-UsingMantis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -286,6 +356,7 @@
 		};
 		18A8A25E265A3A55004FEE0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7816578F3408DBF26AF8B3DB /* Pods-UsingMantis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
