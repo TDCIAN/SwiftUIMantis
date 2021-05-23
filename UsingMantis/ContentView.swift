@@ -9,7 +9,8 @@ import SwiftUI
 import Mantis
 
 struct ContentView: View {
-    @State var ourImage = UIImage(named: "graphic03")
+//    @State var ourImage = UIImage(named: "graphic03")
+    @State var ourImage = UIImage(systemName: "pencil")
     @State var isShowing = false
     
     var body: some View {
@@ -47,7 +48,10 @@ struct ImageEditor: UIViewControllerRepresentable {
         
     }
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImageEditor>) -> Mantis.CropViewController {
-        let Editor = Mantis.cropViewController(image: UIImage(imageLiteralResourceName: "graphic03"))
+//        let Editor = Mantis.cropViewController(image: UIImage(imageLiteralResourceName: "graphic03"))
+//        let Editor = Mantis.cropViewController(image: UIImage(systemName: "person")!)
+        let Editor = Mantis.cropViewController(image: theimage!)
+        
         Editor.delegate = context.coordinator
         return Editor
     }
